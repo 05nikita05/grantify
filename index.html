@@ -10,72 +10,7 @@
     rel="stylesheet"
 />
     <title>Document</title>
-    <style>
-        /* General Fixes */
-        body, html {
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        /* Adjustments for smaller screens */
-        @media (max-width: 755px) {
-            /* Navigation adjustments */
-            #routes {
-                display: none; /* Hide route links on smaller screens */
-            }
-            .buttons button {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-            }
-            #logo h4 {
-                font-size: 1rem;
-            }
-
-            /* Hero section adjustments */
-            .hero {
-                flex-direction: column;
-                padding: 1.5rem;
-            }
-            .hero-part1, .hero-part2 {
-                width: 100%;
-                padding: 1rem;
-            }
-            .hero-part1 h1 {
-                font-size: 6vw;
-            }
-            .hero-part1 h4 {
-                font-size: 1rem;
-            }
-            .hero-part1 .buttons button {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            /* Adjusting "Goals & Reporting" section */
-            #goals {
-                width: 70vw;
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            /* Trusted logos adjustments */
-            .companies .logos img {
-                width: 25vw;
-            }
-
-            /* Insights section adjustments */
-            .insight1 img, .insight2 img {
-                width: 50vw;
-                height: auto;
-            }
-            .insights .icon {
-                width: 5vw;
-                height: auto;
-            }
-            .insight2 img {
-                width: 60vw;
-            }
-        }
-    </style>
+    
 </head>
 <body>
     <main class="h-auto w-full overflow-hidden">
@@ -106,7 +41,7 @@
         <button class="button hidden sm:inline-block px-3 py-2 rounded-lg sm:rounded-2xl text-white bg-black text-sm sm:text-base">Get Started</button>
 
         <!-- Mobile Menu Button (Hamburger Icon) -->
-        <button title="b" id="menu-button" class="sm:hidden flex items-center justify-center p-2 focus:outline-none">
+        <button id="menu-button" title="b" class="sm:hidden flex items-center justify-center p-2 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -122,6 +57,8 @@
         <a href="#" class="block text-gray-700 font-semibold hover:text-gray-900">Pricing</a>
     </div>
 </nav>
+
+
 
 <!-- Hero Section -->
 <div class="hero w-full h-auto sm:h-[89vh] relative bg-black rounded-xl flex flex-col sm:flex-row bg-center bg-cover p-6 sm:p-0">
@@ -163,25 +100,26 @@
     <!-- Right Section for Images and Icons -->
     <div class="hero-part2 w-full sm:w-1/2 flex items-center justify-center p-6 sm:p-0">
         <div class="insights flex flex-col justify-center items-center gap-4 sm:gap-8 w-full">
+            
             <!-- First Image Set -->
-            <div class="insight1 flex items-end gap-4 sm:gap-6 relative">
-                <img class="w-[40vw] sm:w-[15vw] h-[40vw] sm:h-[16vw]" src="./assests/image2.png" alt="Insight Image 1">
-                <img class="icon absolute top-2 sm:top-0 left-64 sm:left-0" src="./assests/icon2.png" alt="Icon 2">
-                <img class="w-[35vw] sm:w-[19vw] h-[45vw] sm:h-[20vw]" src="./assests/image3.png" alt="Insight Image 2">
+            <div class="insight1 flex items-end justify-center gap-4 sm:gap-6 relative">
+                <img class="w-[35vw] sm:w-[15vw] h-auto" src="./assests/image2.png" alt="Insight Image 1">
+                <img class="icon absolute top-2 sm:top-0 left-4 sm:left-8" src="./assests/icon2.png" alt="Icon 2">
+                <img class="w-[50vw] sm:w-[19vw] h-auto" src="./assests/image3.png" alt="Insight Image 2">
             </div>
-
-          <!-- Second Image Set -->
-<!-- Second Image Set -->
-<div class="insight2 flex items-center justify-center relative w-full">
-    <!-- Adjusted Icon and Image Sizes for Mobile -->
-    <img class="icon absolute left-2 sm:left-24 bottom-2 sm:bottom-12 w-24 h-24 sm:w-12 sm:h-12" src="./assests/icon3.png" alt="Icon 3">
-    <img class="w-[60vw] sm:w-[22vw] h-[25vw] sm:h-[8vw]" src="./assests/image1.png" alt="Insight Image 3">
-    <img class="icon absolute right-2 sm:right-20 top-1/2 transform -translate-y-1/2 w-6 h-6 sm:w-12 sm:h-12" src="./assests/icon1.png" alt="Icon 1">
-</div>
-
-
+    
+            <!-- Second Image Set -->
+            <div class="insight2 flex items-center justify-center relative w-full">
+                <img class="icon absolute left-4 sm:left-24 bottom-2 sm:bottom-12 w-20 h-20 sm:w-12 sm:h-12" src="./assests/icon3.png" alt="Icon 3">
+                <img class="w-[60vw] sm:w-[22vw] h-auto" src="./assests/image1.png" alt="Insight Image 3">
+                <img class="icon absolute right-4 sm:right-20 top-1/2 transform -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" src="./assests/icon1.png" alt="Icon 1">
+            </div>
+    
         </div>
     </div>
+    
+
+    
 </div>
 
         
@@ -486,14 +424,6 @@
                 
     </main>
     <script src="script.js"></script>
-    <!-- Script for Toggle Menu (Add this script at the end of your body) -->
-<script>
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-</script>
+    
 </body>
 </html>
